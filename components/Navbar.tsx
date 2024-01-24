@@ -22,7 +22,7 @@ const Navbar: FC = () => {
       <div className={styles.links}>
         {navigation.map(({id, title, path}) => (
           <Link key={id} href={path}>
-            <div className={pathname === path ? styles.active : null}>{title}</div>
+            <div className={pathname === path ? styles.active : undefined}>{title}</div>
           </Link>
         ))}
       </div>
