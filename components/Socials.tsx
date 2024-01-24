@@ -3,8 +3,10 @@ import {FC} from "react";
 import {socialsType} from "@/types";
 import styles from "../styles/Socials.module.scss";
 
+// type socialsType = Social[];
+
 type socialsProps = {
-  socials: socialsType
+  socials: socialsType[]
 }
 
 const Socials: FC<socialsProps> = ({socials}) => {
