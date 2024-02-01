@@ -5,7 +5,11 @@ import {FC} from "react";
 import styles from "../styles/Home.module.scss"
 import Heading from "@/components/Heading";
 import {Socials} from "@/components/Socials";
+import {socialsType} from "@/types";
 
+type homeProps={
+  socials:[socialsType]
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   try{
@@ -30,7 +34,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 
-const Home: FC = ({socials}) => {
+const Home: FC<homeProps> = ({socials}) => {
   return (
 
     <div className={styles.wrapper}>

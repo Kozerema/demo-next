@@ -12,8 +12,13 @@ type contactTypeProps = {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const {id} = context.params;
+  const {id} = context.params as {id:string};
   const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+
+  if(!response.ok){
+    throw new Error(`Failed to fetch user data. Status: ${response.status}`);
+  }
+
   const data = await response.json();
 
   if (!data) {

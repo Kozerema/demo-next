@@ -13,7 +13,7 @@ const App = ({Component, pageProps}: AppProps) => {
         <main>
           <Component {...pageProps} />
         </main>
-        <Image src={pets} width={500} height={350} alt={pets} placeholder={"blur"}/><title></title>
+        <Image src={pets} width={500} height={350} alt={"pets"} placeholder={"blur"}/>
       </Layout>
 
     </>
